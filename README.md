@@ -72,23 +72,24 @@ In order to run the complete code:
 1.	On the ROS laptop,
 
     - On PC: roslaunch my_tiago tiago_pc.launch. Runs the following the nodes
-      - aruco_tranform.py (node /xtion_aruco). Publishes the  transform between /xtion_rgb_optical_frame and the /aruco_marker_frame through topic /xtion_aruco (PoseStamped() message) to enable object tracking, due to not being to perform the look up directly from within Tiago
+    
+     - aruco_tranform.py (node /xtion_aruco). Publishes the  transform between /xtion_rgb_optical_frame and the /aruco_marker_frame through topic /xtion_aruco (PoseStamped() message) to enable object tracking, due to not being to perform the look up directly from within Tiago
 
-      - pal_face_detector_opencv/launch/detector.launch file, for face tracking
+     - pal_face_detector_opencv/launch/detector.launch file, for face tracking
 
-      - image_view.py node to visualise the tracked person on topic /pal_face/debug
+     - image_view.py node to visualise the tracked person on topic /pal_face/debug
 
 
 
      - On Tiago (ssh pal@10.68.0.1):
-       - roslaunch tiago_handover tiago_handovers.launch. Runs the following nodes
+      - roslaunch tiago_handover tiago_handovers.launch. Runs the following nodes
 
-       - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /arm_goal (-0.09 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp position in robot-to-human handover, where distance = 0.3 (default distance from object to pregrasp). Grasp point -0.09 is adjustable
+      - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /arm_goal (-0.09 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp position in robot-to-human handover, where distance = 0.3 (default distance from object to pregrasp). Grasp point -0.09 is adjustable
 
-       - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
+      - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
 
-       - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
-       - single.launch. Runs the aruco marker detector for marker ID 582, size 70. If a different marker is used change in
+      - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
+      - single.launch. Runs the aruco marker detector for marker ID 582, size 70. If a different marker is used change in
 
 
        - plan_smooth.cpp. Contains the code that applies time parameterization to the waypoints sent by main.py script and executes the cartesian path trajectory with MoveIt. If desired, possible to adjust the eef_step to speed up motion duration (higher step, quicker motion, but more jerky).
