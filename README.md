@@ -8,9 +8,9 @@ https://youtu.be/w_uDgpDpouc
 
 This repository includes the code used for the development of the project and the user-studies. 
 
-##**Components needed**
+## **Components needed**
 
-###Hardware
+### Hardware
 
 
 -	Amplifier
@@ -27,7 +27,7 @@ This repository includes the code used for the development of the project and th
 -	2 cameras, positioned perpendicularly to the handover and another from the ceiling, facing the participant, for later video annotation
 -	Astra Orbbec camera for hand tracking
 
-###Software
+### Software
 
 -	Matlab for cue presentation and interconnection of EEG and robot (Behavioral analysis laptop). Required toolboxes:
   -	Robotics system toolbox: https://www.mathworks.com/products/robotics.html
@@ -37,7 +37,7 @@ This repository includes the code used for the development of the project and th
 -	Python + ROS (ROS laptop). Additional packages to install,
   - pal_face_detector_opencv (https://github.com/pal-robotics/pal_face_detector_opencv)
 
-###Other components
+### Other components
 
 -	Syringes
 -	GEL
@@ -51,7 +51,7 @@ The behavioural analysis laptop must be connected to the LCD projector as well a
 Firstly, input the tiago_handover package into the catkin workspace inside Tiago, and tiago_pc package into the catkin workspace of the Ubuntu ROS laptop.
 
 
-##**Set-up**
+## **Set-up**
 
 
 Firstly, input the tiago_handover package into the catkin workspace inside Tiago, and tiago_pc package into the catkin workspace of the Ubuntu ROS laptop. The EEG_Tiago_study.m maltab file should be added to the working directory of the behavioural analysis laptop. The object should be placed hafway between the participant with the aruco marker facing Tiago. Switch on the projector. 
@@ -62,7 +62,7 @@ Firstly, input the tiago_handover package into the catkin workspace inside Tiago
 
 3.	In the tiago_handover/src/main.py, adjust the participantID, rosbag file path in order to save all the ROS logs. 
 
-##**Main code**
+## **Main code**
 
 In order to run the complete code:
 
@@ -122,7 +122,7 @@ Sample output in Rviz for hand tracking: https://youtu.be/8yc4a9Qg9nI
 
 
 
-##**ADDITIONAL CODES**
+## **ADDITIONAL CODES**
 
 Other scripts included in the repository which can be used, but are optional, include.
 
