@@ -30,12 +30,12 @@ This repository includes the code used for the development of the project and th
 ### Software
 
 -	Matlab for cue presentation and interconnection of EEG and robot (Behavioral analysis laptop). Required toolboxes:
-  -	Robotics system toolbox: https://www.mathworks.com/products/robotics.html
-  -	Psychtoolbox (http://psychtoolbox.org/)
+        -	Robotics system toolbox: https://www.mathworks.com/products/robotics.html
+        -	Psychtoolbox (http://psychtoolbox.org/)
 -	Curry 7  (EEG acquisition laptop)
 -	Nuitrack for skeleton tracking (http://download.3divi.com/Nuitrack/doc/Installation_page.html)  (ROS laptop) and nuitrack-ros connection node (https://github.com/shinselrobots/nuitrack_body_tracker)
 -	Python + ROS (ROS laptop). Additional packages to install,
-  - pal_face_detector_opencv (https://github.com/pal-robotics/pal_face_detector_opencv)
+        - pal_face_detector_opencv (https://github.com/pal-robotics/pal_face_detector_opencv)
 
 ### Other components
 
