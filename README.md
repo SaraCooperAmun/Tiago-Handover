@@ -114,7 +114,7 @@ If desired it is possible to include new commands, merely add a new number or ex
 3. Switch on the LCD projector, if not done already, and when the initialization screen shows up, press ENTER on keypad to start the experiment
 
 If hand tracking with Astra/Nuitrack is enabled, the only difference is step 1)
-Roslaunch my_tiago tiago_pc_camera). Aparts from the nodes mentioned, it launches
+Roslaunch my_tiago tiago_pc_camera (running main_astra.py). Aparts from the nodes mentioned, it launches
 
 - nuitrack_body_tracker.launch file, to run hand tracking with Nuitrack
 - hand_speed.py to send hand coordinate data across to Tiago
