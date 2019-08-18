@@ -16,7 +16,7 @@
   <node pkg="tiago_handover" type="plan_smooth" name="smooth_plan"/>
 
 
-  <rosparam command="load" file="$(find tiago_moveit_tutorial)/config/pick_motions.yaml" param = "mymotions" /> 
+  <rosparam command="load" file="$(find tiago_handover)/config/pick_motions.yaml" param = "mymotions" /> 
   <node pkg="tiago_handover" type="main.py" name="handover_node" output="screen"/>
 
  

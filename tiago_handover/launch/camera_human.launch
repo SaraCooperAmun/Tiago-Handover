@@ -16,7 +16,7 @@
   <node pkg="tiago_moveit_tutorial" type="plan_smooth" name="smooth_plan"/>
 
 
-  <rosparam command="load" file="$(find tiago_moveit_tutorial)/config/pick_motions.yaml" param = "mymotions" /> 
+  <rosparam command="load" file="$(find tiago_handover)/config/pick_motions.yaml" param = "mymotions" /> 
   <node pkg="tiago_handover" type="main_astra.py" name="movegroup_marker" output="screen"/>
 
  
