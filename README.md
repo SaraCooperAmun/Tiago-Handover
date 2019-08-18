@@ -85,9 +85,9 @@ In order to run the complete code:
 
        - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /arm_goal (-0.09 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp position in robot-to-human handover, where distance = 0.3 (default distance from object to pregrasp). Grasp point -0.09 is adjustable
 
-		   - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
+       - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
 
-	     - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
+       - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
        - single.launch. Runs the aruco marker detector for marker ID 582, size 70. If a different marker is used change in
 
 
