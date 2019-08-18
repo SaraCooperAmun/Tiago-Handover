@@ -1,0 +1,10 @@
+<launch>
+
+  <arg name="distance" default="0.3"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="goal_offset" args="-0.09 $(arg distance) 0 0.707 -0.707 0 0 /aruco_marker_frame /arm_goal 10" />
+  <rosparam command="load" file="$(find tiago_moveit_tutorial)/config/pick_motions.yaml" /> 
+  <node pkg="tiago_moveit_tutorial" type="object_move_play.py" name="movegroup_marker" output="screen"/>
+
+</launch>
+

@@ -1,0 +1,25 @@
+<launch>
+
+  <arg name="distance" default="0.3"/> 
+
+  <node pkg="tf" type="static_transform_publisher" name="goal_offset" args="-0.09 $(arg distance) 0 0.707 -0.707 0 0 /aruco_marker_frame /arm_goal 10" />
+
+  <node pkg="tf" type="static_transform_publisher" name="place_offset" args="-0.16 0.17 0 0.707 -0.707 0 0 /aruco_marker_frame /place_goal 10" />
+
+  <node pkg="tf" type="static_transform_publisher" name="human_offset" args="-0.16 $(arg distance) 0 0.707 -0.707 0 0 /aruco_marker_frame /human_goal 10" />
+
+
+  <include file="$(find tiago_handover)/launch/single.launch"/>
+
+
+
+  <node pkg="tiago_handover" type="plan_smooth" name="smooth_plan"/>
+
+
+  <rosparam command="load" file="$(find tiago_moveit_tutorial)/config/pick_motions.yaml" param = "mymotions" /> 
+  <node pkg="tiago_handover" type="main.py" name="handover_node" output="screen"/>
+
+ 
+
+</launch>
+

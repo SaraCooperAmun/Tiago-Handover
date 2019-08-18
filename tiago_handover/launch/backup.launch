@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="distance" default="0.3"/>
+
+    <rosparam command="load" file="$(find tiago_moveit_tutorial)/config/pick_motions.yaml" param = "mymotions"   /> 
+  <node pkg="tiago_moveit_tutorial" type="backup.py" name="retreat" output="screen"/>
+
+</launch>
+
