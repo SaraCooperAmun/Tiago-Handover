@@ -1,0 +1,22 @@
+<launch>
+  <!-- Parameters to change each time-->
+
+    <arg name="path1" default="/media/sara/TOSHIBA\ EXT1/MSProject/2019019armblock6.bag" />
+    <arg name="path2" default="/media/sara/TOSHIBA\ EXT1/MSProject/2019019wristblock6.bag" />
+
+ <node pkg="rosbag" type="record" name="joint_trajectory_goal" args="/arm_controller/state
+ -o $(arg path1)"/> 
+
+
+
+ <node pkg="rosbag" type="record" name="wrist_force" args="/wrist_ft
+ -o $(arg path2)"/> 
+
+
+
+  </launch>
+
+
+
+
+

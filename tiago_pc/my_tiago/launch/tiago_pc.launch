@@ -1,0 +1,17 @@
+<launch>
+
+  <include file="$(find pal_face_detector_opencv)/launch/detector.launch">
+        
+  </include>
+  <node pkg="my_tiago" type="aruco_transform.py" name="aruco_look" />
+  <include file="$(find tiago_moveit_config)/launch/moveit_rviz.launch"></include>
+  <node pkg="image_view" type="image_view" name="person_track" args="/pal_face/debug"/>
+
+  
+
+
+
+</launch>
+
+
+

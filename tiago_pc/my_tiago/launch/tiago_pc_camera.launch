@@ -1,0 +1,19 @@
+<launch>
+
+  <include file="$(find pal_face_detector_opencv)/launch/detector.launch">
+        
+  </include>
+  <node pkg="my_tiago" type="aruco_transform.py" name="aruco_look" />
+  <include file="$(find tiago_moveit_config)/launch/moveit_rviz.launch"></include>
+  <node pkg="image_view" type="image_view" name="person_track" args="/pal_face/debug"/>
+  <include file="$(find nuitrack_body_tracker)/launch/nuitrack_body_tracker.launch"></include>
+
+  <node pkg="body_tracker_msgs" type="hand_speed.py" name="body_tracker"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="camera_offset" args="1.0 -0.5 0.82 1.0 0 0 /base_link /nuitrack_camera_link 10" />
+
+
+</launch>
+
+
+
