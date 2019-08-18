@@ -3,7 +3,7 @@
   <arg name="distance" default="0.3"/>
 
     <rosparam command="load" file="$(find tiago_handover)/config/pick_motions.yaml" param = "mymotions"   /> 
-  <node pkg="tiago_moveit_tutorial" type="backup.py" name="retreat" output="screen"/>
+  <node pkg="tiago_handover" type="backup.py" name="retreat" output="screen"/>
 
 </launch>
 
