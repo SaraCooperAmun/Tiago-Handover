@@ -13,7 +13,7 @@
 
 
 
-  <node pkg="tiago_moveit_tutorial" type="plan_smooth" name="smooth_plan"/>
+  <node pkg="tiago_handover" type="plan_smooth" name="smooth_plan"/>
 
 
   <rosparam command="load" file="$(find tiago_handover)/config/pick_motions.yaml" param = "mymotions" /> 
