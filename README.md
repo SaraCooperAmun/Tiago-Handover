@@ -19,7 +19,7 @@ This repository includes the code used for the development of the project and th
 -	Keypad, to detect action onnset
 -	Object + aruco marker
 -	Ethernet cable
--	On the ROS laptop,
+-	3 laptops:
 
     - 	Windows 7 for EEG acquisition
     -	Windows 7 for behavioral analysis
