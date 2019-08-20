@@ -83,33 +83,32 @@ In order to run the complete code:
 
     
     -	On Tiago (ssh pal@10.68.0.1):
-        - roslaunch tiago_handover tiago_handovers.launch. Runs the following nodes
+        -	roslaunch tiago_handover tiago_handovers.launch. Runs the following nodes
+            -  static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /arm_goal (-0.09 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp position in robot-to-human handover, where distance = 0.3 (default distance from object to pregrasp). Grasp point -0.09 is adjustable
 
-        - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /arm_goal (-0.09 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp position in robot-to-human handover, where distance = 0.3 (default distance from object to pregrasp). Grasp point -0.09 is adjustable
+            - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
 
-        - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /place_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the place goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
-
-        - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
-        - single.launch. Runs the aruco marker detector for marker ID 582, size 70. If a different marker is used change in
+            - static_transform_publisher.py (tf package): publishes transform between /aruco_marker_frame and /human_goal (-0.16 $(arg distance) 0 0.707 -0.707 0 0), indicating the pregrasp goal position in human-to-robot handover. Grasp point -0.16 is adjustable.
+            - single.launch. Runs the aruco marker detector for marker ID 582, size 70. If a different marker is used change in
 
 
-         - plan_smooth.cpp. Contains the code that applies time parameterization to the waypoints sent by main.py script and executes the cartesian path trajectory with MoveIt. If desired, possible to adjust the eef_step to speed up motion duration (higher step, quicker motion, but more jerky).
+            - plan_smooth.cpp. Contains the code that applies time parameterization to the waypoints sent by main.py script and executes the cartesian path trajectory with MoveIt. If desired, possible to adjust the eef_step to speed up motion duration (higher step, quicker motion, but more jerky).
 
-         - main.py. Contains the main script to carry out the experiment and robot-to-human as well as human-to-robot handovers
+            - main.py. Contains the main script to carry out the experiment and robot-to-human as well as human-to-robot handovers
 
-     -On Tiago (ssh): roslaunch tiago_handover backup.launch, includes necessary codes to react if Tiago is not responding correctly.
+        - roslaunch tiago_handover backup.launch, includes necessary codes to react if Tiago is not responding correctly.
 
-Input the following in order to return Tiago to resting position after pausing Matlab script (cue presentation),
-#2) Stop Matlab script
-#1) Return Tiago's gripper to initial position
-#3) Restart Matlab script
+            Input the following in order to return Tiago to resting position after pausing Matlab script (cue presentation),
+            #2) Stop Matlab script
+            #1) Return Tiago's gripper to initial position
+            #3) Restart Matlab script
 
-#Other commands include
-#4) Open gripper. Used for instance when the person starts to pull too soon
-#5) Open gripper and retreat
-#7) Indicate to Matlab action was unsuccesfull
+            #Other commands include
+            #4) Open gripper. Used for instance when the person starts to pull too soon
+            #5) Open gripper and retreat
+            #7) Indicate to Matlab action was unsuccesfull
 
-If desired it is possible to include new commands, merely add a new number or expected string input.
+            If desired it is possible to include new commands, merely add a new number or expected string input.
 
 2. Run Matlab script on behavioural laptop
 3. Switch on the LCD projector, if not done already, and when the initialization screen shows up, press ENTER on keypad to start the experiment
