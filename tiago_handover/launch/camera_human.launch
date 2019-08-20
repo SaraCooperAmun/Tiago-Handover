@@ -17,7 +17,7 @@
 
 
   <rosparam command="load" file="$(find tiago_handover)/config/pick_motions.yaml" param = "mymotions" /> 
-  <node pkg="tiago_handover" type="main_astra.py" name="handover_camera" output="screen"/>
+  <node pkg="tiago_handover" type="main_astra.py" name="movegroup_marker" output="screen"/>
 
  
 
