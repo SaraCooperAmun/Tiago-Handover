@@ -132,8 +132,9 @@ Other scripts included in the repository which can be used, but are optional, in
 -	My_tiago/launch/pick_demo.launch (moveit_simple_grasps_test.py). Runs the moveit_simple_grasps sample to determine all possible grasp positions for the selected object, taking as example http://wiki.ros.org/Robots/TIAGo/Tutorials/Pick_and_place/Pick%20%26%20place%20demo
 -	My_tiago/launch/pick_demo_real.launch. Runs the modified movit_simple_grasps sample to pick the object from the table and offer it to human (pick_client.py, spherical_grasps_server.py, pick_and_place_server.py)
 -	My_tiago/launch/rosbag_launch.launch. Records data of the following topics to a rosbag
-  -	/arm_controller/state, used for analysisng Tiago’s arm trajectory
-  -	/wrist_ft, to evaluate gripper behavior
+
+    - /arm_controller/state, used for analysisng Tiago’s arm trajectory
+    -	/wrist_ft, to evaluate gripper behavior
 -	Camera_human.launch. Same as tiago_pc.launch but runs main_astra.py instead. It shows human-to-robot handover where Tiago takes into account human hand movement
 -	Tiago_handover/launch/pick_human.launch (human_grasp_play_motion.py) runs human-to-robot handover using learning by demonstration movements
 
