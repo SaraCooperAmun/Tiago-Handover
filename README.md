@@ -2,7 +2,7 @@
 
 This is the MSc project of Sara Cooper, for the MSc in Robotics, Autonomous and Interactive Systems at Heriot-Watt University, Edinburgh (UK), in year 2018-2019, under supervision of Mauro Dragone. It consists of a joint human-robot interaction and psychology study with University of Stirling, alongside Stuart Gow and Dimitrious Kourtis. The main goal was to research how human action planning differed when engaging in a joint-action - such as an object exchange or handover- with a robot from when doing an individual action. For that it uses PAL Robotics Tiago robot and EEG (Electroencephalogram) to detect brain activity. Experiments were conducted with 16 participants.
 Sample demo of user study: 
-https://youtu.be/rbWynDuErvs
+https://youtu.be/rbWynDuErvs  and 
 https://youtu.be/w_uDgpDpouc
 
 
