@@ -71,9 +71,9 @@ In order to run the complete code:
 
 1.	On the ROS laptop,
 
-    - On PC: roslaunch my_tiago tiago_pc.launch. Runs the following the nodes
-    
-     - aruco_tranform.py (node /xtion_aruco). Publishes the  transform between /xtion_rgb_optical_frame and the /aruco_marker_frame through topic /xtion_aruco (PoseStamped() message) to enable object tracking, due to not being to perform the look up directly from within Tiago
+
+    -	On PC: roslaunch my_tiago tiago_pc.launch. Runs the following the nodes
+        - aruco_tranform.py (node /xtion_aruco). Publishes the  transform between /xtion_rgb_optical_frame and the /aruco_marker_frame through topic /xtion_aruco (PoseStamped() message) to enable object tracking, due to not being to perform the look up directly from within Tiago
 
      - pal_face_detector_opencv/launch/detector.launch file, for face tracking
 
