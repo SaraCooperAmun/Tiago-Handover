@@ -19,10 +19,11 @@ This repository includes the code used for the development of the project and th
 -	Keypad, to detect action onnset
 -	Object + aruco marker
 -	Ethernet cable
--	3 laptops:
-   -	Windows 7 for EEG acquisition
-   -	Windows 7 for behavioral analysis
-   -	Ubuntu ROS laptop to control Tiago’s actions
+-	On the ROS laptop,
+
+    - 	Windows 7 for EEG acquisition
+    -	   Windows 7 for behavioral analysis
+    -	   Ubuntu ROS laptop to control Tiago’s actions
 -	Tiago robot (PAL Robotics)
 -	2 cameras, positioned perpendicularly to the handover and another from the ceiling, facing the participant, for later video annotation
 -	Astra Orbbec camera for hand tracking
